@@ -17,7 +17,7 @@ function lista(){
     element.innerHTML = texto.value;
     texto.value = '';
     element.addEventListener('click', function(){
-      element.style.backgroundColor = rgb(128, 128, 128);
+      element.style.backgroundColor = 'rgb(128, 128, 128)';
      
     })
     element.addEventListener('dblclick', function(){
