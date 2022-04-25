@@ -15,14 +15,20 @@ function lista(){
     element.className = 'task-items';
     list.appendChild(element);
     element.innerHTML = texto.value;
-    texto.innerHTML = '';
+    texto.value = '';
     element.addEventListener('click', function(){
-      element.style.backgroundColor = 'grey';
-      //element.className = 'tasks-items selected';
+      element.style.backgroundColor = rgb(128, 128, 128);
+     
     })
     element.addEventListener('dblclick', function(){
       element.className = 'task-items completed';
+      element.style.textDecoration = `line-through solid rgb(0, 0, 0)`;
+      element.addEventListener('dblclick', function(){
+        element.className = 'task-items';
+        element.style.textDecoration = 'none';
+      })
     })
+
   })
   const limpar = document.createElement('button');
   limpar.innerHTML = 'Clear';
