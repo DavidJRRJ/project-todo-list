@@ -20,6 +20,9 @@ function lista(){
       element.style.backgroundColor = 'grey';
       //element.className = 'tasks-items selected';
     })
+    element.addEventListener('dblclick', function(){
+      element.className = 'task-items completed';
+    })
   })
   const limpar = document.createElement('button');
   limpar.innerHTML = 'Clear';
@@ -27,8 +30,12 @@ function lista(){
   main.appendChild(limpar);
   limpar.addEventListener('click', function(){
     let elementos = document.getElementsByClassName('task-items');
+    let elementosCompletos = document.getElementsByClassName('task-items completed');
     while (elementos.length > 0) {
       elementos[0].parentNode.removeChild(elementos[0]);
+    }
+    while (elementosCompletos.length > 0){
+      elementosCompletos[0].parentNode.removeChild(elementosCompletos[0]);
     }
   })
 }
