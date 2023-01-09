@@ -8,7 +8,7 @@ Neste projeto, foi verificado se fui capaz de:
 
 * Desenvolver uma lista de tarefas usando HTML, CSS e JavaScript
 
-## Tecnologias usadas
+## Tecnologias utilizadas
 
 * HTML5
 * CSS
